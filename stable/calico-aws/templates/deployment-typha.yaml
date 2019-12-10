@@ -19,6 +19,10 @@ spec:
     matchLabels:
       app: {{ template "calico.name" . }}-typha
       release: {{ .Release.Name }}
+{{- with .Values.typha.deploymentStrategy }}
+  strategy:
+{{ toYaml . | trim | indent 4 }}
+{{- end }}
   template:
     metadata:
       labels:

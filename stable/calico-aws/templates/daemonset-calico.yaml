@@ -79,6 +79,7 @@ spec:
 {{ tpl . $ | indent 8 }}
     {{- end }}
       hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
       serviceAccountName: {{ template "calico.serviceAccountName.calico" . }}
       automountServiceAccountToken: {{ .Values.serviceAccount.calico.automountToken }}
       # Minimize downtime during a rolling upgrade or deletion; tell Kubernetes to do a "force
