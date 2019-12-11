@@ -12,4 +12,3 @@ maintainers:
     url: https://github.com/gp42
     email: gennadiy.potapov@gmail.com
 engine: gotpl
-icon: https://raw.githubusercontent.com/gp42/helm-charts/master/docs/logo/logo_ops42_black_on_trans.png
